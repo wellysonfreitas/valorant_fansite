@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Resetando margens e paddings para evitar inconsistências */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+}
+
+/* Declaração de variáveis de cor para fácil manutenção */
+:root {
+    --cor0:#f0f8ff;
+    --cor1:#E43343;
+    --cor2:#c70000d0;
+    --cor3:#00c080;
+    --cor4:#05903D;
+    --cor5: #be0808d0;
+}
+
+/* Estilo do corpo da página */
+body {
+    background: #E43343; /* Cor de fundo da página */
+    height: 100vh;
+}
+
+/* Estilo do cabeçalho e navegação */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 30px;
+    border-bottom: 0.4px solid #f0f8ff; /* Linha fina abaixo do cabeçalho */
+}
+
+/* Estilos para a lista de navegação */
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+/* Estilo de cada item da lista de navegação */
+nav ul li {
+    margin: 10px 15px;
+    list-style: none;
+}
+
+/* Estilo para os links do menu de navegação */
+nav ul li a {
+    color: var(--cor0);
+    font-size: 18px;
+    margin: 20px;
+    text-decoration: none;
+}
+
+/* Efeito hover para os itens do menu */
+nav ul li:hover {
+    transform: translateY(-5px); /* Elevação leve ao passar o mouse */
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do contêiner das armas */
+.Container-armas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilos dos cards de armas */
+.arsenal {
+    margin: 20px;
+    background-color: rgb(214, 214, 214);
+    width: 100%;
+    max-width: 500px; /* Limite máximo de largura */
+    height: auto;
+    border-radius: 12px; /* Bordas arredondadas */
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Sombra */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer; /* Cursor de mão */
+}
+
+/* Estilo do título principal */
+h1 {
+    display: flex;
+    margin-left: 130px;
+    font-family: "Bebas Neue", system-ui;
+    font-size: 90px;
+    color: #ffffffd3; /* Transparência leve na cor */
+}
+
+/* Estilos dos subtítulos */
+h2 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+/* Estilo para parágrafos dentro dos cards */
+p {
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Estilo para imagens das armas */
+.arsenal img {
+    max-width: 90%;
+    width: 400px;
+    height: auto;
+    margin-top: 40px;
+}
+
+.arsenal img:hover {
+    transform: scale(1.1); /* Animação de zoom nas armas */
+    transition: 0.3s ease;
+}
+
+/* Estilo para imagens das armas especificas */
+.arsenal img[alt="Classic"] {
+    width: 200px;
+}
+
+.arsenal img[alt="Frenzy"] {
+    width: 200px;
+}
+
+.arsenal img[alt="Sheriff"] {
+    width: 260px;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+
+    /* Redimensionando título para telas menores */
+    h1 {
+        text-align: center;
+        font-size: 80px;
+        margin: 15px;
+    }
+
+    /* Estilos para lista de navegação no mobile */
+    nav ul {
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    /* Padding reduzido para contêiner das armas */
+    .Container-armas {
+        padding: 10px;
+    }
+
+    /* Ajustando largura do card de armas */
+    .arsenal {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}

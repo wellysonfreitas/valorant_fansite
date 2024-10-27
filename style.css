@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Remoção de margens e definições básicas */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+/* Paleta de cores para o site */
+:root {
+    --cor0:#f0f8ff;
+    --cor1:#E43343;
+    --cor2:#c70000d0;
+    --cor3:#00c080;
+    --cor4:#05903D;
+    --cor5: #be0808d0;
+}
+
+body {
+    background-color: var(--cor1);
+    height: 100vh;
+}
+
+header {
+    min-height: 150px;
+    text-align: center;
+    padding-top: 22px;
+    border-top: 0.4px solid #f0f8ff;
+}
+
+/* Estilo do cabeçalho principal */
+header > h1 {
+    color: var(--cor0);
+    font-family: "Bebas Neue", system-ui;
+    font-size: 70px;
+}
+
+header > p {
+    color: var(--cor0);
+    font-size: 1.2rem; 
+}
+
+/* Configuração do menu de navegação */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 30px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--cor0);
+    font-size: 18px;
+    margin: 20px;
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do menu hambúrguer */
+.menu{
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 4px;
+    border-radius: 3px;
+    background: var(--cor0);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+/* Área de conteúdo principal */
+main {
+    background-color: var(--cor0);
+    min-width: 300px;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 18px;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main p {
+    font-size: 18px;
+    margin: 15px 0px;
+    text-align: justify;
+    line-height: 26px;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor2);
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+aside {
+    padding: 10px;
+}
+
+aside h2 {
+    line-height: 60px;
+}
+
+aside .config {
+    line-height: 60px;
+}
+
+aside > ul {
+    list-style-position: inside;
+}
+
+/* Estilo de imagens do conteúdo */
+img {
+    width: 560px;
+    display: block;
+    margin: auto;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+}
+
+/* Rodapé da página */
+footer {
+    text-align: center;
+    background-color: rgb(29, 28, 28);
+    color: var(--cor0);
+    font-size: 18px;
+    padding: 12px;
+}
+
+footer a {
+    color: var(--cor4);
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--cor3);
+    text-decoration: underline;
+}
+
+footer .copy {
+    margin-top: 14px;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width:768px) {
+
+    .navgation {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu.ativo .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.ativo .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--cor1);
+        gap: -10px;
+        transition: 0.3s;
+    }
+
+    .nav-menu.ativo {
+        right: 0;
+    }
+
+    li {
+        margin: 16px 0;
+    }
+
+    /*Estilos para imagens e iframes em dispo móveis*/
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    iframe {
+        max-width: 100%;
+        max-height: 240px;
+    }
+}
+
+
+
+

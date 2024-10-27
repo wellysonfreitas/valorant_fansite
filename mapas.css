@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Estilos globais para todos os elementos */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+}
+
+/* Variáveis de cor para uso consistente no design */
+:root {
+    --cor0:#f0f8ff;
+    --cor1:#E43343;
+    --cor2:#c70000d0;
+    --cor3:#00c080;
+    --cor4:#05903D;
+    --cor5: #be0808d0;
+}
+
+/* Estilo do corpo da página */
+body {
+    background: #E43343;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Estilo da barra de navegação */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 30px;
+    border-bottom: 0.4px solid #f0f8ff;
+}
+
+/* Estilo do menu de navegação */
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+/* Espaçamento entre itens do menu de navegação */
+nav ul li {
+    margin: 10px 15px;
+    list-style: none;
+}
+
+/* Estilo dos links do menu */
+nav ul li a {
+    color: var(--cor0);
+    font-size: 18px;
+    margin: 20px;
+    text-decoration: none;
+}
+
+/* Efeito ao passar o mouse sobre os itens do menu */
+nav ul li:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre os links */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do container de mapas */
+.Container-mapas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+/* Estilo do título principal */
+h1 {
+    margin-left: 480px;
+    font-family: "Bebas Neue", system-ui;
+    font-size: 100px;
+    color: #ffffffd3;
+}
+
+/* Estilo do subtítulo de cada mapa */
+h2 {
+    font-family: "Bebas Neue", system-ui;
+    font-size: 40px;
+    color: #141414;
+}
+
+/* Estilo de cada bloco de mapa */
+.mapa {
+    max-width: 100%;
+    padding: 10px;
+}
+
+/* Estilo do texto descritivo de cada mapa */
+.mapa span{
+    font-size: 16px;
+    color: #ffffffd3;
+    display: block;
+    width: 400px;
+    white-space: normal;
+    word-wrap: break-word;
+    margin-bottom: 35px;
+}
+
+/* Estilo da imagem de cada mapa */
+.mapa img{
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Efeito de zoom ao passar o mouse sobre a imagem */
+.mapa img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos de responsividade para dispositivos menores */
+@media (max-width: 768px) {
+
+    /* Ajuste de largura máxima do texto descritivo */
+    span {
+        max-width: 100%;
+    }
+
+    /* Centralização do título principal */
+    h1 {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* Ajuste de alinhamento dos itens do menu em telas menores */
+    nav ul {
+        align-items: center;
+    }
+
+    /* Espaçamento reduzido entre itens do menu em dispositivos móveis */
+    nav ul li {
+        margin: 5px 10px;
+    }
+}
+
+
+

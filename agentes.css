@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    /* Reset básico para margens e padding, e configurações de box-sizing */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+}
+
+/* Definição das cores principais */
+:root {
+    --cor0:#f0f8ff;
+    --cor1:#E43343;
+    --cor2:#c70000d0;
+    --cor3:#00c080;
+    --cor4:#05903D;
+    --cor5: #be0808d0;
+}
+
+/* Configurações do corpo da página */
+body {
+    background-color: var(--cor1);
+    height: 100vh;
+}
+
+/* Estilização do menu de navegação */
+nav {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 30px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 15px; /* Espaçamento entre os itens do menu */
+    list-style: none;
+}
+
+/* Estilos para os links de navegação */
+nav ul li a {
+    color: var(--cor0);
+    font-size: 18px;
+    margin: 20px;
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    color: var(--cor0);
+    font-family: "Bebas Neue", system-ui;
+    font-size: 70px;
+    border-top: 0.4px solid var(--cor0);
+}
+
+header {
+    text-align: center;
+}
+
+.ability img {
+    width: 40px;
+    margin: 5px;
+    transition: transform 0.3s;
+}
+
+.ability img:hover {
+    transform: scale(1.1); /* Animação de zoom nas habilidades */
+}
+
+/* Efeito ao passar o mouse sobre o card do agente */
+.agent:hover {
+    transform: scale(1.05);
+}
+
+#searchInput {
+    width: 430px;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--cor1);
+}
+
+/* Estilos dos agentes e habilidades */
+.Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-left: auto;
+    transition: margin-left 0.3s;
+}
+
+.agent {
+    margin: 30px;
+    background-color: rgba(206, 206, 206, 0.295);
+    width: 320px;
+    height: 480px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;  
+}
+
+.agent > span {
+    margin-top: 6px;
+}
+
+.agent > h2 {
+    font-size: 24px;
+    padding-top: 10px;
+    font-family: "Bebas Neue", system-ui;
+}
+
+.agent img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.agent img[alt="Fade"] {
+    width: 90%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.agent img[alt="Iso"] {
+    width: 90%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.agent img[alt="Deadlock"] {
+    width: 90%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .Container {
+        justify-content: center;
+    }
+
+    .agent {
+        max-width: 90%;
+        margin: 10px;
+    }
+
+    #searchInput {
+        max-width: 90%;
+    }
+
+    nav ul {
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+}
